@@ -1,0 +1,340 @@
+/* Estilos do projeto acadêmico de SEO - Samsung Shop demonstrativo */
+
+:root {
+    --azul: #1428a0;
+    --azul-escuro: #0b175f;
+    --texto: #171717;
+    --texto-suave: #5f6368;
+    --fundo: #f5f7fb;
+    --branco: #ffffff;
+    --borda: #e4e7ee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    line-height: 1.6;
+    background: var(--branco);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.cabecalho {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.barra-topo {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    color: var(--azul);
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+
+.navegacao a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navegacao a:hover,
+.navegacao a:focus-visible {
+    color: var(--azul);
+}
+
+.destaque {
+    background: linear-gradient(120deg, #f0f3ff 0%, #ffffff 75%);
+    padding: 86px 0 76px;
+}
+
+.destaque-conteudo {
+    max-width: 1120px;
+}
+
+.etiqueta {
+    margin: 0 0 12px;
+    color: var(--azul);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    max-width: 760px;
+    margin-bottom: 20px;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.introducao {
+    max-width: 650px;
+    margin-bottom: 28px;
+    color: var(--texto-suave);
+    font-size: 1.12rem;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 23px;
+    border: 2px solid var(--azul);
+    border-radius: 28px;
+    background: var(--azul);
+    color: var(--branco);
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.botao:hover,
+.botao:focus-visible {
+    background: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+.aviso {
+    margin: 20px 0 0;
+    color: var(--texto-suave);
+    font-size: 0.82rem;
+}
+
+.secao {
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+.titulo-secao {
+    max-width: 700px;
+    margin-bottom: 32px;
+}
+
+.titulo-secao h2,
+.faixa h2 {
+    margin-bottom: 12px;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+.titulo-secao > p:last-child,
+.sobre > p {
+    color: var(--texto-suave);
+}
+
+.grade-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.cartao {
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background: var(--branco);
+    box-shadow: 0 8px 28px rgba(18, 34, 90, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(18, 34, 90, 0.1);
+}
+
+.icone-produto {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+    place-items: center;
+    border-radius: 16px;
+    background: #eef1ff;
+    font-size: 2rem;
+}
+
+.cartao h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.cartao p {
+    min-height: 78px;
+    margin-bottom: 18px;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.link-cartao {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+.link-cartao span {
+    margin-left: 4px;
+}
+
+.faixa {
+    padding: 58px 0;
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.faixa-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.faixa .etiqueta {
+    color: #d8deff;
+}
+
+.faixa-conteudo > div {
+    max-width: 720px;
+}
+
+.faixa-conteudo p:last-child {
+    margin-bottom: 0;
+    color: #e7eaff;
+}
+
+.botao-claro {
+    flex-shrink: 0;
+    border-color: var(--branco);
+    background: var(--branco);
+    color: var(--azul);
+}
+
+.botao-claro:hover,
+.botao-claro:focus-visible {
+    background: #e9edff;
+    color: var(--azul-escuro);
+}
+
+.sobre {
+    max-width: 1120px;
+}
+
+.sobre > p {
+    max-width: 850px;
+}
+
+.rodape {
+    padding: 32px 0;
+    border-top: 1px solid var(--borda);
+    background: var(--fundo);
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.logo-rodape {
+    font-size: 1.2rem;
+}
+
+.rodape p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.rodape .nota-rodape {
+    font-size: 0.78rem;
+}
+
+/* Ajustes para telas menores, como celulares */
+@media (max-width: 760px) {
+    .barra-topo {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .navegacao {
+        gap: 12px 20px;
+    }
+
+    .destaque {
+        padding: 62px 0 56px;
+    }
+
+    .grade-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao p {
+        min-height: auto;
+    }
+
+    .faixa-conteudo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .secao {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
